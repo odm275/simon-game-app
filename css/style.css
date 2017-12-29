@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+.board {
+  position: relative; }
+  .board .btn {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    position: absolute; }
+    .board .btn--green {
+      background-color: green;
+      top: 10rem; }
+    .board .btn--red {
+      background-color: red; }
+    .board .btn--yellow {
+      background-color: yellow; }
+    .board .btn--blue {
+      background-color: blue; }
