@@ -9,18 +9,31 @@ html {
   font-size: 62.5%; }
 
 .board {
-  position: relative; }
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
   .board .btn {
     width: 10rem;
     height: 10rem;
     border-radius: 10rem;
     position: absolute; }
     .board .btn--green {
-      background-color: green;
-      top: 10rem; }
+      background-color: #00a74a;
+      left: 50%;
+      top: 50%; }
     .board .btn--red {
-      background-color: red; }
+      background-color: #9f0f17;
+      left: 40%;
+      top: 25%; }
     .board .btn--yellow {
-      background-color: yellow; }
+      background-color: #cca707;
+      left: 60%;
+      top: 25%; }
     .board .btn--blue {
-      background-color: blue; }
+      left: 50%;
+      background-color: #094a8f; }
+  .board .btn--menu {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    position: absolute; }

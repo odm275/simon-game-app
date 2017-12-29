@@ -1,5 +1,8 @@
 .board{
     position:relative;
+    width:100vw;
+    height:100vh;
+    //display:block;
 
 .btn{
     width:10rem;
@@ -8,20 +11,37 @@
     position:absolute;
 
     &--green{
-        background-color:$color-green;
-        top:10rem;
-        
+        background-color:$color-off-green;
+        left:50%;
+        top:50%;
     }
     &--red{
-        background-color:$color-red;
+        background-color:$color-off-red;
+        left:40%;
+        top:25%;
     }
     &--yellow{
-        background-color:$color-yellow;
+        background-color:$color-off-yellow;
+        left:60%;
+        top:25%;
     }
     &--blue{
-        background-color:$color-blue;
+      left:50%;
+        background-color:$color-off-blue;
     }
 }
+.btn--menu{
+  width:2rem;
+  height:2rem;
+  border-radius:2rem;
+  position:absolute;
 
+  &--start{
+
+  }
+  &--strict{
+
+  }
 }
 
+}
