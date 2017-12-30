@@ -1,0 +1,12 @@
+@mixin rectcurve-button($radius){
+    width: $radius * 2;
+    height: $radius * 2;
+    border-radius: $radius*3;
+    position:absolute;
+}
+
+@mixin rectangular-button($radius){
+    width: $radius * 2;
+    height: $radius * 2;
+    position:absolute;
+}

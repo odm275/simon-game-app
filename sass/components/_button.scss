@@ -3,12 +3,8 @@
     width:100vw;
     height:100vh;
     //display:block;
-
 .btn{
-    width:10rem;
-    height:10rem;
-    border-radius:10rem;
-    position:absolute;
+    @include rectcurve-button(4%);
 
     &--green{
         background-color:$color-off-green;
@@ -17,12 +13,12 @@
     }
     &--red{
         background-color:$color-off-red;
-        left:40%;
+        left:30%;
         top:25%;
     }
     &--yellow{
         background-color:$color-off-yellow;
-        left:60%;
+        left:70%;
         top:25%;
     }
     &--blue{
@@ -30,18 +26,20 @@
         background-color:$color-off-blue;
     }
 }
-.btn--menu{
-  width:2rem;
-  height:2rem;
-  border-radius:2rem;
-  position:absolute;
+.menu{
+ @include rectangular-button(2%);
 
   &--start{
-
+    background-color:$color-on;
+    top: 25%;
+    left:60%;
   }
   &--strict{
-
+      top:25%;
+      left:65%;
+    background-color:$color-strict;
   }
+
 }
 
 }

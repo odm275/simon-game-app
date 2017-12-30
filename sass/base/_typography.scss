@@ -1,0 +1,21 @@
+.header{
+    position:absolute;
+    left:45%;
+    top:32%;
+    font-size:1.3vw;
+
+
+    &--count{
+        position:absolute;
+        left:1vw;
+    }
+    &--start{
+        position:absolute;
+        left:16vw;
+        
+    }
+    &--strict{   
+        position:absolute;        
+        left:21vw;
+    }
+}

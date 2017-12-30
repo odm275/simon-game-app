@@ -8,14 +8,29 @@
 html {
   font-size: 62.5%; }
 
+.header {
+  position: absolute;
+  left: 45%;
+  top: 32%;
+  font-size: 1.3vw; }
+  .header--count {
+    position: absolute;
+    left: 1vw; }
+  .header--start {
+    position: absolute;
+    left: 16vw; }
+  .header--strict {
+    position: absolute;
+    left: 21vw; }
+
 .board {
   position: relative;
   width: 100vw;
   height: 100vh; }
   .board .btn {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 10rem;
+    width: 8%;
+    height: 8%;
+    border-radius: 12%;
     position: absolute; }
     .board .btn--green {
       background-color: #00a74a;
@@ -23,17 +38,24 @@ html {
       top: 50%; }
     .board .btn--red {
       background-color: #9f0f17;
-      left: 40%;
+      left: 30%;
       top: 25%; }
     .board .btn--yellow {
       background-color: #cca707;
-      left: 60%;
+      left: 70%;
       top: 25%; }
     .board .btn--blue {
       left: 50%;
       background-color: #094a8f; }
-  .board .btn--menu {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
+  .board .menu {
+    width: 4%;
+    height: 4%;
     position: absolute; }
+    .board .menu--start {
+      background-color: #FC0102;
+      top: 25%;
+      left: 60%; }
+    .board .menu--strict {
+      top: 25%;
+      left: 65%;
+      background-color: yellow; }
