@@ -11,19 +11,18 @@ html {
 
 .header {
   position: absolute;
-  left: 82.5rem;
-  top: 31.5rem;
-  font-size: 2rem;
+  left: 45vw;
+  top: 30vh;
+  font-size: 2vw;
   color: white; }
   .header--count {
-    position: absolute;
-    left: 1rem; }
+    position: absolute; }
   .header--start {
     position: absolute;
-    left: 29.5rem; }
+    left: 15vw; }
   .header--strict {
     position: absolute;
-    left: 38.5rem; }
+    left: 23vw; }
 
 .board {
   position: relative;
