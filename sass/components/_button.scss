@@ -1,42 +1,53 @@
 .board{
     position:relative;
-    width:100vw;
-    height:100vh;
+    width:$x;
+    height:$y;
+    
     //display:block;
 .btn{
-    @include rectcurve-button(4%);
-
+    width: $radius;
+    height: $radius;
+    border-radius: $radius;
+    font-size:$symbol;//   Size of symbol inside button.
+    
+    
+    
     &--green{
-        background-color:$color-off-green;
-        left:50%;
-        top:50%;
+        @include play-button($color-off-green); 
+        transform: translate($x/2,0);
+       
     }
-    &--red{
-        background-color:$color-off-red;
-        left:30%;
-        top:25%;
+    &--pink{
+        @include play-button($color-off-pink);
+        transform: translate($x*.25,$y*.25);
+        
+        
+          
     }
-    &--yellow{
-        background-color:$color-off-yellow;
-        left:70%;
-        top:25%;
+    &--orange{
+        @include play-button($color-off-orange);
+        transform: translate($x*.75,$y*.25);
+        
+        
     }
     &--blue{
-      left:50%;
-        background-color:$color-off-blue;
+        @include play-button($color-off-blue);
+        transform: translate($x/2,$y/2);
+        
+        
     }
 }
 .menu{
- @include rectangular-button(2%);
+ @include menu-button(2%);
 
   &--start{
+    
     background-color:$color-on;
-    top: 25%;
-    left:60%;
+    
+
   }
   &--strict{
-      top:25%;
-      left:65%;
+      
     background-color:$color-strict;
   }
 

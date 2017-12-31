@@ -1,21 +1,22 @@
 .header{
     position:absolute;
-    left:45%;
-    top:32%;
-    font-size:1.3vw;
+    left:82.5rem;
+    top:31.5rem;
+    font-size:2rem;
+    color:white;
 
 
     &--count{
         position:absolute;
-        left:1vw;
+        left:1rem;
     }
     &--start{
         position:absolute;
-        left:16vw;
+        left:29.5rem;
         
     }
     &--strict{   
         position:absolute;        
-        left:21vw;
+        left:38.5rem;
     }
 }

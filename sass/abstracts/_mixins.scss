@@ -1,11 +1,15 @@
-@mixin rectcurve-button($radius){
-    width: $radius * 2;
-    height: $radius * 2;
-    border-radius: $radius*3;
+@mixin play-button($color){
+    
+    color:$color;
+    border-color:$color; 
     position:absolute;
+    background:none;        
+    border-style: solid;
+    
 }
 
-@mixin rectangular-button($radius){
+
+@mixin menu-button($radius){
     width: $radius * 2;
     height: $radius * 2;
     position:absolute;
