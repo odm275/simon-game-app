@@ -32,35 +32,56 @@ html {
     width: 19vw;
     height: 19vw;
     border-radius: 19vw;
-    font-size: 17vw; }
+    font-size: 12vw;
+    font-weight: bold; }
     .board .btn--green {
       color: #00ff08;
       border-color: #00ff08;
       position: absolute;
       background: none;
-      border-style: solid;
+      border: 10px solid;
       transform: translate(50vw, 0); }
+      .board .btn--green:hover {
+        color: #1a1717;
+        background: #00ff08; }
+      .board .btn--green:active {
+        transform: translate(50vw, 0) scale(1.1); }
     .board .btn--pink {
       color: #ff00d4;
       border-color: #ff00d4;
       position: absolute;
       background: none;
-      border-style: solid;
+      border: 10px solid;
       transform: translate(25vw, 25vh); }
+      .board .btn--pink:hover {
+        color: #1a1717;
+        background: #ff00d4; }
+      .board .btn--pink:active {
+        transform: translate(25vw, 25vh) scale(1.1); }
     .board .btn--orange {
       color: #c04b15;
       border-color: #c04b15;
       position: absolute;
       background: none;
-      border-style: solid;
+      border: 10px solid;
       transform: translate(75vw, 25vh); }
+      .board .btn--orange:hover {
+        color: #1a1717;
+        background: #c04b15; }
+      .board .btn--orange:active {
+        transform: translate(75vw, 25vh) scale(1.1); }
     .board .btn--blue {
       color: #2d12c7;
       border-color: #2d12c7;
       position: absolute;
       background: none;
-      border-style: solid;
+      border: 10px solid;
       transform: translate(50vw, 50vh); }
+      .board .btn--blue:hover {
+        color: #1a1717;
+        background: #2d12c7; }
+      .board .btn--blue:active {
+        transform: translate(50vw, 50vh) scale(1.1); }
   .board .menu {
     width: 4%;
     height: 4%;

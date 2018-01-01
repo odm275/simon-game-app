@@ -9,24 +9,50 @@
     height: $radius;
     border-radius: $radius;
     font-size:$symbol;//   Size of symbol inside button.
-    
-    
+    font-weight: bold; //   THICC Symbols
     
     &--green{
         @include play-button($color-off-green); 
         transform: translate($x/2,0);
+
+        &:hover{
+            color: $background-color;
+            background: $color-off-green;
+        }
+        &:active{
+            
+            transform: translate($x/2,0) scale(1.1);
+        }
        
     }
     &--pink{
         @include play-button($color-off-pink);
         transform: translate($x*.25,$y*.25);
-        
+
+
+        &:hover{
+            color: $background-color;
+            background: $color-off-pink;
+
+        }
+        &:active{
+            transform:translate($x*.25,$y*.25) scale(1.1);
+        }
         
           
     }
     &--orange{
         @include play-button($color-off-orange);
         transform: translate($x*.75,$y*.25);
+
+        &:hover{
+            color: $background-color;
+            background: $color-off-orange;
+
+        }
+        &:active{
+            transform: translate($x*.75,$y*.25) scale(1.1);
+        }
         
         
     }
@@ -34,7 +60,14 @@
         @include play-button($color-off-blue);
         transform: translate($x/2,$y/2);
         
-        
+        &:hover{
+            color: $background-color;
+            background: $color-off-blue;
+
+        }
+        &:active{
+            transform:translate($x/2,$y/2) scale(1.1);
+        }
     }
 }
 .menu{
