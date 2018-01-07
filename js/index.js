@@ -1,36 +1,70 @@
 //OLOO style
-
 "use strict";
 
 //Root behavior
 var handleState = {
-    newState: function(obj){
+
+    setState: function(obj){
         //state will actually be created in the object simon via implicit binding.
-        this.state = obj;
+        this.state = obj || [];
     },
     getState: function(){
-        return "The state is: " + this.state;
+        return this.state;
+    },
+    setButtons: function(){
+        this.btns = {
+        green:$(".btn--green"),
+        pink:$(".btn--pink"),
+        orange:$(".btn--orange"),
+        blue:$(".btn--blue")}
+    },
+    getButtons: function(){
+        return this.btns;
     },
     clearState: function(){
         this.state = [];
     },
     random: function(){
         this.state.push(Math.floor((Math.random() * 4) + 1));
-    }
+    },
 };
 
 var state = Object.create(handleState);
-
+console.log(state);
 //Some combination of root behavior
 state.print = function(){
     console.log(this.getState());
 };
 
+state.computerTurn = function(){
+    this.getState().map(function(i,index){//loop through some state element i [3,1,2,1]
+        console.log(this.getButtons()[i].bind(simon));
+        
+        //this.getButtons[i].css(function(){
+           // $(this).css("background-color",index);
+        //});
+    });
+}
 
 var simon = Object.create(state);
 
+//Computer generating pattern
+simon.setState([]);
+simon.setButtons();
+
+//0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
+simon.random();
+simon.random();
+simon.random();
+simon.computerTurn();
+
+$(document).ready(function(){ 
+
+})
+
+
 //Computer's turn
-simon.newState({
+/*simon.newState({
     green: $(".btn--green").on("click", function(){
        console.log(this);
     }),
@@ -44,10 +78,9 @@ simon.newState({
         console.log(this);
     })
 });
+*/
 
-$(document).ready(function(){
-    simon.state.green;
-});
+;
 
 
 
