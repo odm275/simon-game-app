@@ -25,37 +25,49 @@ var handleState = {
         this.state = [];
     },
     random: function(){
-        this.state.push(Math.floor((Math.random() * 4) + 1));
+        //this.state.push(Math.floor((Math.random() * 4)));
+        switch(Math.floor((Math.random() * 4))){
+            case 0:
+            this.state.push('green');
+            break;
+            case 1:
+            this.state.push('pink');
+            break;
+            case 2:
+            this.state.push('orange');
+            break;
+            case 3:
+            this.state.push('blue');
+            break;
+        }
     },
 };
 
 var state = Object.create(handleState);
-console.log(state);
 //Some combination of root behavior
 state.print = function(){
     console.log(this.getState());
 };
 
 state.computerTurn = function(){
-    this.getState().map(function(i,index){//loop through some state element i [3,1,2,1]
-        console.log(this.getButtons()[i].bind(simon));
-        
-        //this.getButtons[i].css(function(){
-           // $(this).css("background-color",index);
-        //});
-    });
+    
+  this.getState().forEach(function(i){//loop through some state element i [3,1,2,1]
+    this.getButtons()[i].css(function(){
+            $(this).css("color", j);
+        });   
+    }.bind(this));
+    
 }
 
 var simon = Object.create(state);
-
 //Computer generating pattern
 simon.setState([]);
 simon.setButtons();
-
 //0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
 simon.random();
 simon.random();
 simon.random();
+simon.print();
 simon.computerTurn();
 
 $(document).ready(function(){ 
