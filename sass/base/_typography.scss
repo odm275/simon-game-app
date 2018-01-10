@@ -1,22 +1,18 @@
+body {
+    padding: 4rem;
+}
+
 .header{
     position:absolute;
-    left:45vw;
-    top:30vh;
-    font-size:2vw;
+    font-size:2.5rem;
     color:white;
-
-
     &--count{
-        position:absolute;
         
     }
     &--start{
-        position:absolute;
-        left:15vw;
+
         
     }
     &--strict{   
-        position:absolute;        
-        left:23vw;
     }
 }

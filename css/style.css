@@ -7,81 +7,78 @@
 
 html {
   font-size: 62.5%;
-  background-color: #1a1717; }
+  background-color: #343536; }
+
+body {
+  padding: 4rem; }
 
 .header {
   position: absolute;
-  left: 45vw;
-  top: 30vh;
-  font-size: 2vw;
+  font-size: 2.5rem;
   color: white; }
-  .header--count {
-    position: absolute; }
-  .header--start {
-    position: absolute;
-    left: 15vw; }
-  .header--strict {
-    position: absolute;
-    left: 23vw; }
 
 .board {
   position: relative;
-  width: 100vw;
-  height: 100vh; }
+  max-width: 100%;
+  height: 70rem;
+  border-style: solid;
+  border-width: 7px;
+  border-color: red; }
   .board .btn {
-    width: 19vw;
-    height: 19vw;
-    border-radius: 19vw;
-    font-size: 12vw;
+    position: absolute;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 13rem;
+    font-size: 11rem;
     font-weight: bold; }
     .board .btn--green {
       color: #00ff08;
       border-color: #00ff08;
-      position: absolute;
       background: none;
       border: 10px solid;
-      transform: translate(50vw, 0); }
+      display: inline-block;
+      transform: translate(50rem, 0); }
       .board .btn--green:hover {
-        color: #1a1717;
+        color: #343536;
         background: #00ff08; }
       .board .btn--green:active {
-        transform: translate(50vw, 0) scale(1.1); }
+        transform: translate(50rem, 0) scale(1.1); }
     .board .btn--pink {
       color: #ff00d4;
       border-color: #ff00d4;
-      position: absolute;
       background: none;
       border: 10px solid;
-      transform: translate(25vw, 25vh); }
+      display: inline-block;
+      transform: translate(25rem, 17.5rem); }
       .board .btn--pink:hover {
-        color: #1a1717;
+        color: #343536;
         background: #ff00d4; }
       .board .btn--pink:active {
-        transform: translate(25vw, 25vh) scale(1.1); }
+        transform: translate(25rem, 17.5rem) scale(1.1); }
     .board .btn--orange {
-      color: #c04b15;
-      border-color: #c04b15;
-      position: absolute;
+      color: #ec4c08;
+      border-color: #ec4c08;
       background: none;
       border: 10px solid;
-      transform: translate(75vw, 25vh); }
+      display: inline-block;
+      transform: translate(75rem, 17.5rem); }
       .board .btn--orange:hover {
-        color: #1a1717;
-        background: #c04b15; }
+        color: #343536;
+        background: #ec4c08; }
       .board .btn--orange:active {
-        transform: translate(75vw, 25vh) scale(1.1); }
+        transform: translate(75rem, 17.5rem) scale(1.1); }
     .board .btn--blue {
       color: #2d12c7;
       border-color: #2d12c7;
-      position: absolute;
       background: none;
       border: 10px solid;
-      transform: translate(50vw, 50vh); }
+      display: inline-block;
+      transform: translate(50rem, 35rem); }
       .board .btn--blue:hover {
-        color: #1a1717;
+        color: #343536;
         background: #2d12c7; }
       .board .btn--blue:active {
-        transform: translate(50vw, 50vh) scale(1.1); }
+        transform: translate(50rem, 35rem) scale(1.1); }
   .board .menu {
     width: 4%;
     height: 4%;
