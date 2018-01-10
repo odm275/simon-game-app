@@ -3,7 +3,6 @@
 
 //Root behavior
 var handleState = {
-
     setState: function(obj){
         //state will actually be created in the object simon via implicit binding.
         this.state = obj || [];
@@ -49,12 +48,16 @@ state.print = function(){
     console.log(this.getState());
 };
 
+
 state.computerTurn = function(){
     
-  this.getState().forEach(function(i){//loop through some state element i [3,1,2,1]
+  this.getState().forEach(function(i){//loop through some state element i [3,1,2,1];
+    console.log(this.getButtons()[i]);
     this.getButtons()[i].css(function(){
-            $(this).css("color", j);
-        });   
+            console.log(this);
+            this.css("color", this);
+            });   
+
     }.bind(this));
     
 }
@@ -64,6 +67,7 @@ var simon = Object.create(state);
 simon.setState([]);
 simon.setButtons();
 //0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
+console.log(simon.getButtons());
 simon.random();
 simon.random();
 simon.random();
@@ -83,7 +87,8 @@ $(document).ready(function(){
     pink: $(".btn--pink").click(function(){
         console.log(this);
     }),
-    orange: $(".btn--orange").click(function(){
+    orange: $(".
++   btn--orange").click(function(){
         console.log(this);
     }),
     blue: $(".btn--blue").click(function(){
@@ -124,6 +129,9 @@ Buttton.onClick = function(evt) {
 }
 
 */
+
+
+
 
 
 
