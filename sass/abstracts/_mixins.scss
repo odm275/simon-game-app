@@ -1,11 +1,10 @@
 @mixin play-button($color){
-    
-    color:$color;
-    border-color:$color; 
+
     position:absolute;
-    background:none;        
-    border: 10px solid;
-    
+    color:$color;
+    border-color:$color;
+    background:none;
+
 }
 
 

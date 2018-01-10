@@ -3,7 +3,10 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px; }
 
 html {
   font-size: 62.5%;
@@ -26,62 +29,57 @@ html {
 
 .board {
   position: relative;
-  width: 100vw;
-  height: 100vh; }
+  max-width: 80%;
+  padding: 1rem;
+  height: 80%; }
   .board .btn {
-    width: 19vw;
-    height: 19vw;
-    border-radius: 19vw;
-    font-size: 12vw;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    font-size: 5rem;
     font-weight: bold; }
     .board .btn--green {
+      position: absolute;
       color: #00ff08;
       border-color: #00ff08;
-      position: absolute;
       background: none;
-      border: 10px solid;
-      transform: translate(50vw, 0); }
+      transform: translate(0, 0); }
       .board .btn--green:hover {
         color: #1a1717;
         background: #00ff08; }
-      .board .btn--green:active {
-        transform: translate(50vw, 0) scale(1.1); }
     .board .btn--pink {
+      position: absolute;
       color: #ff00d4;
       border-color: #ff00d4;
-      position: absolute;
       background: none;
-      border: 10px solid;
-      transform: translate(25vw, 25vh); }
+      transform: translate(6.25rem, 25rem); }
       .board .btn--pink:hover {
         color: #1a1717;
         background: #ff00d4; }
       .board .btn--pink:active {
-        transform: translate(25vw, 25vh) scale(1.1); }
+        transform: translate(6.25rem, 25rem) scale(1.1); }
     .board .btn--orange {
+      position: absolute;
       color: #c04b15;
       border-color: #c04b15;
-      position: absolute;
       background: none;
-      border: 10px solid;
-      transform: translate(75vw, 25vh); }
+      transform: translate(18.75rem, 25rem); }
       .board .btn--orange:hover {
         color: #1a1717;
         background: #c04b15; }
       .board .btn--orange:active {
-        transform: translate(75vw, 25vh) scale(1.1); }
+        transform: translate(18.75rem, 25rem) scale(1.1); }
     .board .btn--blue {
+      position: absolute;
       color: #2d12c7;
       border-color: #2d12c7;
-      position: absolute;
       background: none;
-      border: 10px solid;
-      transform: translate(50vw, 50vh); }
+      transform: translate(12.5rem, 50rem); }
       .board .btn--blue:hover {
         color: #1a1717;
         background: #2d12c7; }
       .board .btn--blue:active {
-        transform: translate(50vw, 50vh) scale(1.1); }
+        transform: translate(12.5rem, 50rem) scale(1.1); }
   .board .menu {
     width: 4%;
     height: 4%;
