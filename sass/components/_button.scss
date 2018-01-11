@@ -1,3 +1,4 @@
+//https://www.w3.org/Style/Examples/007/center.en.html
 .board{
     position:relative;
     max-width:100%;
@@ -16,20 +17,21 @@
     border-radius: $radius;
     font-size:$symbol;//   Size of symbol inside button.
     font-weight: bold; //   THICC Symbols
-    
+
+
     &--green{
-        @include play-button($color-off-green); 
-        transform: translate($x/2,0);
+        @include play-button($color-off-green);
+        transform: translate(0,0);//Centering is done via the left-upper corner of the div
 
         &:hover{
             color: $background-color;
             background: $color-off-green;
         }
         &:active{
-            
-            transform: translate($x/2,0) scale(1.1);
+
+            //transform: translate($x/2,0) scale(1.1);
         }
-       
+
     }
     &--pink{
         @include play-button($color-off-pink);
@@ -44,8 +46,8 @@
         &:active{
             transform:translate($x*.25,$y*.25) scale(1.1);
         }
-        
-          
+
+
     }
     &--orange{
         @include play-button($color-off-orange);
@@ -59,13 +61,13 @@
         &:active{
             transform: translate($x*.75,$y*.25) scale(1.1);
         }
-        
-        
+
+
     }
     &--blue{
         @include play-button($color-off-blue);
         transform: translate($x/2,$y/2);
-        
+
         &:hover{
             color: $background-color;
             background: $color-off-blue;
@@ -80,13 +82,13 @@
  @include menu-button(2%);
 
   &--start{
-    
+
     background-color:$color-on;
-    
+
 
   }
   &--strict{
-      
+
     background-color:$color-strict;
   }
 

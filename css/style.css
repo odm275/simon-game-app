@@ -3,7 +3,10 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px; }
 
 html {
   font-size: 62.5%;
@@ -32,6 +35,7 @@ body {
     font-size: 11rem;
     font-weight: bold; }
     .board .btn--green {
+      position: absolute;
       color: #00ff08;
       border-color: #00ff08;
       background: none;
@@ -44,6 +48,7 @@ body {
       .board .btn--green:active {
         transform: translate(50rem, 0) scale(1.1); }
     .board .btn--pink {
+      position: absolute;
       color: #ff00d4;
       border-color: #ff00d4;
       background: none;
@@ -68,6 +73,7 @@ body {
       .board .btn--orange:active {
         transform: translate(75rem, 17.5rem) scale(1.1); }
     .board .btn--blue {
+      position: absolute;
       color: #2d12c7;
       border-color: #2d12c7;
       background: none;
