@@ -10,7 +10,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: #343536; }
+  background-color: #1a1717; }
 
 body {
   padding: 4rem; }
@@ -29,77 +29,73 @@ body {
   border-color: red; }
   .board .btn {
     position: absolute;
-    width: 13rem;
-    height: 13rem;
-    border-radius: 13rem;
-    font-size: 11rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    font-size: 5rem;
     font-weight: bold; }
     .board .btn--green {
-      color: #00ff08;
-      border-color: #00ff08;
+      color: green;
+      border-color: green;
       background: none;
       border: 10px solid;
-      display: inline-block;
       top: 0%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, 0%); }
       .board .btn--green:hover {
-        color: #343536;
-        background: #00ff08; }
+        color: #1a1717;
+        background: green; }
       .board .btn--green:active {
         top: 0%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, 0%); }
+        transform: translate(-50%, 0%) scale(1.1); }
     .board .btn--pink {
-      color: #ff00d4;
-      border-color: #ff00d4;
+      color: pink;
+      border-color: pink;
       background: none;
       border: 10px solid;
-      display: inline-block;
       top: 50%;
       transform: translate(0, -50%); }
       .board .btn--pink:hover {
-        color: #343536;
-        background: #ff00d4; }
+        color: #1a1717;
+        background: pink; }
       .board .btn--pink:active {
         top: 50%;
-        transform: translate(0, -50%); }
+        transform: translate(0, -50%) scale(1.1); }
     .board .btn--orange {
-      color: #ec4c08;
-      border-color: #ec4c08;
+      color: orange;
+      border-color: orange;
       background: none;
       border: 10px solid;
-      display: inline-block;
       top: 50%;
       right: 0%;
       transform: translate(0, -50%); }
       .board .btn--orange:hover {
-        color: #343536;
-        background: #ec4c08; }
+        color: #1a1717;
+        background: orange; }
       .board .btn--orange:active {
         top: 50%;
         right: 0%;
-        transform: translate(0, -50%); }
+        transform: translate(0, -50%) scale(1.1); }
     .board .btn--blue {
-      color: #2d12c7;
-      border-color: #2d12c7;
+      color: blue;
+      border-color: blue;
       background: none;
       border: 10px solid;
-      display: inline-block;
       top: 100%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -100%); }
       .board .btn--blue:hover {
-        color: #343536;
-        background: #2d12c7; }
+        color: #1a1717;
+        background: blue; }
       .board .btn--blue:active {
-        top: 78%;
+        top: 100%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, 0%); }
+        transform: translate(-50%, -100%) scale(1.1); }
   .board .menu {
     width: 4%;
     height: 4%;

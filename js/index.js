@@ -12,10 +12,10 @@ var handleState = {
     },
     setButtons: function(){
         this.btns = {
-        green:$(".btn--green"),
-        pink:$(".btn--pink"),
-        orange:$(".btn--orange"),
-        blue:$(".btn--blue")}
+        green:".btn--green",
+        pink:".btn--pink",
+        orange:".btn--orange",
+        blue:".btn--blue"}
     },
     getButtons: function(){
         return this.btns;
@@ -44,37 +44,44 @@ var handleState = {
 
 var state = Object.create(handleState);
 //Some combination of root behavior
-state.print = function(){
-    console.log(this.getState());
+state.getTurn = function(){
+    return this.random();
 };
 
-
 state.computerTurn = function(){
-    
+  var self = this; // Better than .bind(..) here.
+  this.random();//  Generate hover
+  this.random();
+  this.random();
   this.getState().forEach(function(i){//loop through some state element i [3,1,2,1];
-    console.log(this.getButtons()[i]);
-    this.getButtons()[i].css(function(){
-            console.log(this);
-            this.css("color", this);
-            });   
+    (function(j){
+      console.log(self.getButtons()[j]);
+      console.log(j);
 
-    }.bind(this));
-    
+      setTimeout(function timer(){
+        console.log(j);
+        $(self.getButtons()[j]).css("color",j);
+      },5000);
+
+
+    })(i);
+  });
+
 }
 
 var simon = Object.create(state);
-//Computer generating pattern
-simon.setState([]);
-simon.setButtons();
-//0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
-console.log(simon.getButtons());
-simon.random();
-simon.random();
-simon.random();
-simon.print();
-simon.computerTurn();
 
-$(document).ready(function(){ 
+
+$(document).ready(function(){
+  //Computer generating pattern
+  simon.setState([]);
+  simon.setButtons();
+  //0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
+  //console.log(simon.getButtons());
+
+  $(".btn").click(function(){
+    simon.computerTurn();
+  });
 
 })
 
@@ -129,20 +136,3 @@ Buttton.onClick = function(evt) {
 }
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

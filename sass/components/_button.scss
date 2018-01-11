@@ -8,12 +8,12 @@
     border-style: solid;
     border-width:7px;
     border-color:red;
-    
+
     //display:block;
 .btn{
     position:absolute;
-   
-    
+
+
     width: $radius;
     height: $radius;
     border-radius: $radius;
@@ -25,7 +25,7 @@
         @include play-button($color-off-green);
         top:0%;
         left:50%;
-        margin-right: -50%; 
+        margin-right: -50%;
         transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
 
         &:hover{
@@ -35,8 +35,8 @@
         &:active{
             top:0%;
             left:50%;
-            margin-right: -50%; 
-            transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
+            margin-right: -50%;
+            transform: translate(-50%,0%) scale(1.1);//Centering is done via the left-upper corner of the div
 
         }
 
@@ -54,7 +54,7 @@
         }
         &:active{
             top:50%;
-            transform: translate(0,-50%);
+            transform: translate(0,-50%) scale(1.1);
         }
 
 
@@ -73,7 +73,7 @@
         &:active{
             top:50%;
             right:0%;
-            transform: translate(0,-50%);
+            transform: translate(0,-50%) scale(1.1);
         }
 
 
@@ -82,7 +82,7 @@
         @include play-button($color-off-blue);
         top:100%;
         left:50%;
-        margin-right: -50%; 
+        margin-right: -50%;
         transform: translate(-50%,-100%);//Centering is done via the left-upper corner of the div
 
         &:hover{
@@ -91,10 +91,10 @@
 
         }
         &:active{
-            top:78%;
-            left:50%;
-            margin-right: -50%; 
-            transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
+          top:100%;
+          left:50%;
+          margin-right: -50%;
+          transform: translate(-50%,-100%) scale(1.1);//Centering is done via the left-upper corner of the div
         }
     }
 }
