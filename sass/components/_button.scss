@@ -2,7 +2,7 @@
 .board{
     position:relative;
     max-width:100%;
-    height:70rem;
+    height:100%;
 
     //newbie
     border-style: solid;
@@ -12,30 +12,39 @@
     //display:block;
 .btn{
     position:absolute;
+   
+    
     width: $radius;
     height: $radius;
     border-radius: $radius;
-    font-size:$symbol;//   Size of symbol inside button.
-    font-weight: bold; //   THICC Symbols
+    font-size: $symbol;// Size of symbol inside button.
+    font-weight: bold; // THICC Symbols.
 
 
     &--green{
         @include play-button($color-off-green);
-        transform: translate(0,0);//Centering is done via the left-upper corner of the div
+        top:0%;
+        left:50%;
+        margin-right: -50%; 
+        transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
 
         &:hover{
             color: $background-color;
             background: $color-off-green;
         }
         &:active{
+            top:0%;
+            left:50%;
+            margin-right: -50%; 
+            transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
 
-            //transform: translate($x/2,0) scale(1.1);
         }
 
     }
     &--pink{
         @include play-button($color-off-pink);
-        transform: translate($x*.25,$y*.25);
+        top:50%;
+        transform: translate(0,-50%);
 
 
         &:hover{
@@ -44,14 +53,17 @@
 
         }
         &:active{
-            transform:translate($x*.25,$y*.25) scale(1.1);
+            top:50%;
+            transform: translate(0,-50%);
         }
 
 
     }
     &--orange{
         @include play-button($color-off-orange);
-        transform: translate($x*.75,$y*.25);
+        top:50%;
+        right:0%;
+        transform: translate(0,-50%);
 
         &:hover{
             color: $background-color;
@@ -59,14 +71,19 @@
 
         }
         &:active{
-            transform: translate($x*.75,$y*.25) scale(1.1);
+            top:50%;
+            right:0%;
+            transform: translate(0,-50%);
         }
 
 
     }
     &--blue{
         @include play-button($color-off-blue);
-        transform: translate($x/2,$y/2);
+        top:78%;
+        left:50%;
+        margin-right: -50%; 
+        transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
 
         &:hover{
             color: $background-color;
@@ -74,7 +91,10 @@
 
         }
         &:active{
-            transform:translate($x/2,$y/2) scale(1.1);
+            top:78%;
+            left:50%;
+            margin-right: -50%; 
+            transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
         }
     }
 }
