@@ -88,10 +88,10 @@ body {
       background: none;
       border: 10px solid;
       display: inline-block;
-      top: 78%;
+      top: 100%;
       left: 50%;
       margin-right: -50%;
-      transform: translate(-50%, 0%); }
+      transform: translate(-50%, -100%); }
       .board .btn--blue:hover {
         color: #343536;
         background: #2d12c7; }
