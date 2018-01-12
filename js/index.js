@@ -55,6 +55,7 @@ state.computerTurn = function(){
   this.random();
 
   for(var i=0; i< this.getState().length; i++){
+    var counter = 1;//turn into for in, and set manual counter for time; but props for matching
     (function(j){
         setTimeout(function timer(){
             console.log(j);
