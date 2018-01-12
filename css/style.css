@@ -104,3 +104,16 @@ body {
       background-color: #FC0102; }
     .board .menu--strict {
       background-color: yellow; }
+
+.classred {
+  transform: scale(1.1); }
+
+.classblue {
+  transform: scale(1.1); }
+
+.classpink {
+  color: red;
+  transform: scale(1.1); }
+
+.classorange {
+  transform: scale(1.1); }

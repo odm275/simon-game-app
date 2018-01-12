@@ -49,24 +49,19 @@ state.getTurn = function(){
 };
 
 state.computerTurn = function(){
-  var self = this; // Better than .bind(..) here.
+    var self = this;
   this.random();//  Generate hover
   this.random();
   this.random();
-  this.getState().forEach(function(i){//loop through some state element i [3,1,2,1];
+
+  for(var i=0; i< this.getState().length; i++){
     (function(j){
-      console.log(self.getButtons()[j]);
-      console.log(j);
-
-      setTimeout(function timer(){
-        console.log(j);
-        $(self.getButtons()[j]).css("color",j);
-      },5000);
-
-
-    })(i);
-  });
-
+        setTimeout(function timer(){
+            console.log(j);
+            console.log(self.getButtons()[j]);
+        },j*3000);
+    })( i );
+  }
 }
 
 var simon = Object.create(state);

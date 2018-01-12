@@ -4,8 +4,6 @@
     border-color:$color;
     background:none;
     border: 10px solid;
-    
-
 }
 
 
@@ -13,4 +11,8 @@
     width: $radius * 2;
     height: $radius * 2;
     position:absolute;
+}
+
+@mixin active(){
+    
 }
