@@ -50,19 +50,20 @@ state.getTurn = function(){
 
 state.computerTurn = function(){
     var self = this;
-  this.random();//  Generate hover
-  this.random();
-  this.random();
+    this.random();
 
-  for(var i=0; i< this.getState().length; i++){
-    var counter = 1;//turn into for in, and set manual counter for time; but props for matching
+
+for(var i=0; i< this.getState().length;i++){
     (function(j){
         setTimeout(function timer(){
-            console.log(j);
-            console.log(self.getButtons()[j]);
-        },j*3000);
-    })( i );
-  }
+            var color = self.getState()[j];
+            console.log(color);
+            
+        },j*1000);
+    })(i);
+}
+
+console.log(this.getState());
 }
 
 var simon = Object.create(state);
@@ -75,7 +76,7 @@ $(document).ready(function(){
   //0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
   //console.log(simon.getButtons());
 
-  $(".btn").click(function(){
+  $(".start").click(function(){
     simon.computerTurn();
   });
 
