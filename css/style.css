@@ -42,7 +42,8 @@ body {
       top: 0%;
       left: 50%;
       margin-right: -50%;
-      transform: translate(-50%, 0%); }
+      transform: translate(-50%, 0%);
+      transition: all .3s ease-in; }
       .board .btn--green:hover {
         color: #1a1717;
         background: green; }
@@ -51,19 +52,30 @@ body {
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, 0%) scale(1.1); }
+    .board .btn--computergreen {
+      color: #1a1717;
+      background: green;
+      transition: all .3s ease-in;
+      transform: translate(-50%, 0%) scale(1.1); }
     .board .btn--pink {
       color: pink;
       border-color: pink;
       background: none;
       border: 10px solid;
       top: 50%;
-      transform: translate(0, -50%); }
+      transform: translate(0, -50%);
+      transition: all .3s ease-in; }
       .board .btn--pink:hover {
         color: #1a1717;
         background: pink; }
       .board .btn--pink:active {
         top: 50%;
         transform: translate(0, -50%) scale(1.1); }
+    .board .btn--computerpink {
+      color: #1a1717;
+      background: pink;
+      transition: all .3s ease-in;
+      transform: translate(0%, -50%) scale(1.1); }
     .board .btn--orange {
       color: orange;
       border-color: orange;
@@ -71,7 +83,8 @@ body {
       border: 10px solid;
       top: 50%;
       right: 0%;
-      transform: translate(0, -50%); }
+      transform: translate(0, -50%);
+      transition: all .3s ease-in; }
       .board .btn--orange:hover {
         color: #1a1717;
         background: orange; }
@@ -79,6 +92,11 @@ body {
         top: 50%;
         right: 0%;
         transform: translate(0, -50%) scale(1.1); }
+    .board .btn--computerorange {
+      color: #1a1717;
+      background: orange;
+      transition: all .3s ease-in;
+      transform: translate(0%, -50%) scale(1.1); }
     .board .btn--blue {
       color: blue;
       border-color: blue;
@@ -87,6 +105,7 @@ body {
       top: 100%;
       left: 50%;
       margin-right: -50%;
+      transition: all .3s ease-in;
       transform: translate(-50%, -100%); }
       .board .btn--blue:hover {
         color: #1a1717;
@@ -96,6 +115,11 @@ body {
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -100%) scale(1.1); }
+    .board .btn--computerblue {
+      color: #1a1717;
+      background: blue;
+      transition: all .3s ease-in;
+      transform: translate(-50%, -100%) scale(1.1); }
   .board .menu {
     width: 4%;
     height: 4%;
@@ -104,16 +128,3 @@ body {
       background-color: #FC0102; }
     .board .menu--strict {
       background-color: yellow; }
-
-.classred {
-  transform: scale(1.1); }
-
-.classblue {
-  transform: scale(1.1); }
-
-.classpink {
-  color: red;
-  transform: scale(1.1); }
-
-.classorange {
-  transform: scale(1.1); }

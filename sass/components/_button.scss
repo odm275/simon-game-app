@@ -27,6 +27,7 @@
         left:50%;
         margin-right: -50%;
         transform: translate(-50%,0%);//Centering is done via the left-upper corner of the div
+        transition: all .3s ease-in;
 
         &:hover{
             color: $background-color;
@@ -39,12 +40,24 @@
             transform: translate(-50%,0%) scale(1.1);//Centering is done via the left-upper corner of the div
 
         }
+    }
+    //override via equal specificity.
+    &--computergreen{
+        
+        color: $background-color;
+        background:$color-off-green;
+        transition: all .3s ease-in;
+        transform: translate(-50%,0%) scale(1.1);
 
     }
+
+  
     &--pink{
         @include play-button($color-off-pink);
         top:50%;
         transform: translate(0,-50%);
+        transition: all .3s ease-in;
+        
 
 
         &:hover{
@@ -59,11 +72,20 @@
 
 
     }
+    &--computerpink{
+        color: $background-color;
+        background:$color-off-pink;
+        transition: all .3s ease-in;
+        transform: translate(0%,-50%) scale(1.1);
+    }
+    
     &--orange{
         @include play-button($color-off-orange);
         top:50%;
         right:0%;
         transform: translate(0,-50%);
+        transition: all .3s ease-in;
+        
 
         &:hover{
             color: $background-color;
@@ -75,14 +97,20 @@
             right:0%;
             transform: translate(0,-50%) scale(1.1);
         }
-
-
     }
+    &--computerorange{
+        color: $background-color;
+        background:$color-off-orange;
+        transition: all .3s ease-in;
+        transform: translate(0%,-50%) scale(1.1);
+    }
+
     &--blue{
         @include play-button($color-off-blue);
         top:100%;
         left:50%;
         margin-right: -50%;
+        transition: all .3s ease-in;        
         transform: translate(-50%,-100%);//Centering is done via the left-upper corner of the div
 
         &:hover{
@@ -96,6 +124,12 @@
           margin-right: -50%;
           transform: translate(-50%,-100%) scale(1.1);//Centering is done via the left-upper corner of the div
         }
+    }
+    &--computerblue{
+        color: $background-color;
+        background:$color-off-blue;
+        transition: all .3s ease-in;
+        transform: translate(-50%,-100%) scale(1.1);
     }
 }
 .menu{
@@ -114,4 +148,4 @@
 
 }
 
-}
+}    

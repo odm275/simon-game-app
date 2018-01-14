@@ -44,41 +44,69 @@ var handleState = {
 
 var state = Object.create(handleState);
 //Some combination of root behavior
-state.getTurn = function(){
-    return this.random();
-};
+
+
 
 state.computerTurn = function(){
     var self = this;
     this.random();
 
-
-for(var i=0; i< this.getState().length;i++){
+for(var i = 0; i < this.getState().length;i++){
     (function(j){
         setTimeout(function timer(){
-            var color = self.getState()[j];
-            console.log(color);
+            //The last iteration will stll be on here.
             
-        },j*1000);
+            var color = self.getState()[j];
+            var button = self.getButtons()[color];
+            $(button).toggleClass("btn--computer"+color);
+
+            setTimeout(function timer(){
+                $(button).toggleClass("btn--computer"+color);
+            }, 2000);
+        },j*2000);
+        
     })(i);
 }
 
 console.log(this.getState());
-}
+};
 
-var simon = Object.create(state);
+state.humanTurn = function(btn){
+        console.log(this.getState());
+
+        
+};
 
 
 $(document).ready(function(){
-  //Computer generating pattern
-  simon.setState([]);
-  simon.setButtons();
-  //0,1,2,3; 0:green, 1:pink, 2:orange; 4:orange.
-  //console.log(simon.getButtons());
+var computer = Object.create(state);
+var human = Object.create(state);
+//Set the Initial Conditions
+computer.setState([]);
+computer.setButtons();
+human.setState([]);
+human.setButtons();
+  
+  //ON BUTTON
+$(".start").click(function(){
+    computer.computerTurn();
+});
 
-  $(".start").click(function(){
-    simon.computerTurn();
-  });
+$(human.getButtons().green).click(function(){
+    human.humanTurn(this);
+    //human.humanTurn();
+});
+$(human.getButtons().pink).click(function(){
+    human.humanTurn(this);
+});
+$(human.getButtons().orange).click(function(){
+    human.humanTurn(this);  
+});
+$(human.getButtons().blue).click(function(){
+    human.humanTurn(this);
+});
+
+
 
 })
 
